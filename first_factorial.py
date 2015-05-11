@@ -4,9 +4,11 @@ import unittest
 def first_factorial(input_int):
     output_int = 1
     if input_int == 0 or input_int == 1:
-        return 1
+        output_int = 1
     else:
-        return -1
+        for current_number in range(1, input_int + 1):
+            output_int *= current_number
+    return output_int
 
 
 class FirstFactorialTest(unittest.TestCase):
@@ -22,5 +24,11 @@ class FirstFactorialTest(unittest.TestCase):
     def test_one_factorial(self):
         input_int = 1
         output_int = 1
+        result_int = first_factorial(input_int)
+        self.assertEqual(result_int, output_int)
+
+    def test_four_factorial(self):
+        input_int = 4
+        output_int = 24
         result_int = first_factorial(input_int)
         self.assertEqual(result_int, output_int)
