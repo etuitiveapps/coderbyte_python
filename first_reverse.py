@@ -2,6 +2,13 @@ import unittest
 
 
 def first_reverse(input_string):
+    """Implement a function to reverse a string
+
+     Args:
+        input_string: input string waiting to be reversed
+
+    Returns: The reverse of the input string
+    """
     output_list = []
     character_list = list(input_string)
     for character in reversed(character_list):
