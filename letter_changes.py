@@ -69,3 +69,9 @@ class LetterChangesTest(unittest.TestCase):
         output_string = 'Ifmmp*3'
         result_string = letter_changes(input_string)
         self.assertEqual(result_string, output_string)
+
+    def test_longest_word_second_test_case(self):
+        input_string = 'fun times!'
+        output_string = 'gvO Ujnft!'
+        result_string = letter_changes(input_string)
+        self.assertEqual(result_string, output_string)
