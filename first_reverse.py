@@ -18,3 +18,9 @@ class FirstReverseTest(unittest.TestCase):
         output_string = 'etybredoc'
         result_string = first_reverse(input_string)
         self.assertEqual(result_string, output_string)
+
+    def test_second_first_reverse_example(self):
+        input_string = 'I Love Code'
+        output_string = 'edoC evoL I'
+        result_string = first_reverse(input_string)
+        self.assertEqual(result_string, output_string)
