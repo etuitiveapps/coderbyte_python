@@ -31,3 +31,6 @@ class FirstReverseTest(unittest.TestCase):
         output_string = 'edoC evoL I'
         result_string = first_reverse(input_string)
         self.assertEqual(result_string, output_string)
+
+if __name__ == '__main__':
+    unittest.main()
