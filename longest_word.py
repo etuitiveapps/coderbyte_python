@@ -37,3 +37,9 @@ class LongestWordTest(unittest.TestCase):
         output_string = 'time'
         result_string = longest_word(input_string)
         self.assertEqual(result_string, output_string)
+
+    def test_longest_word_example_two(self):
+        input_string = 'I love dogs'
+        output_string = 'love'
+        result_string = longest_word(input_string)
+        self.assertEqual(result_string, output_string)
