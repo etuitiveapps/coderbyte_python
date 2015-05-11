@@ -9,13 +9,18 @@ def first_factorial(input_int):
         return -1
 
 
-
 class FirstFactorialTest(unittest.TestCase):
 
     """ Test For ''first_factorial()'' function     """
 
-    def test_first_reverse(self):
+    def test_zero_factorial(self):
         input_int = 0
+        output_int = 1
+        result_int = first_factorial(input_int)
+        self.assertEqual(result_int, output_int)
+
+    def test_one_factorial(self):
+        input_int = 1
         output_int = 1
         result_int = first_factorial(input_int)
         self.assertEqual(result_int, output_int)
