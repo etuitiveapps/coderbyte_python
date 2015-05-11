@@ -45,3 +45,6 @@ class FirstFactorialTest(unittest.TestCase):
         input_int = -1
         with self.assertRaises(ValueError):
             first_factorial(input_int)
+
+if __name__ == '__main__':
+    unittest.main()
