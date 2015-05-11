@@ -18,3 +18,9 @@ class SimpleAdditionTest(unittest.TestCase):
         output_int = 78
         result_int = simple_addition(input_int)
         self.assertEqual(result_int, output_int)
+
+    def test_simple_addition_second_test_case(self):
+        input_int = 140
+        output_int = 9870
+        result_int = simple_addition(input_int)
+        self.assertEqual(result_int, output_int)
