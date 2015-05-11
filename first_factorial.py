@@ -3,13 +3,15 @@ import unittest
 
 def first_factorial(input_int):
     output_int = 1
-    if input_int < 0:
-        raise ValueError('Invalid input: negative factorial detected')
+    if isinstance(input_int, str):
+        raise ValueError('Invalid input:')
     elif input_int == 0:
         output_int = 1
-    else:
+    elif input_int > 0:
         for current_number in range(1, input_int + 1):
             output_int *= current_number
+    else:
+        raise ValueError('Invalid input: negative factorial detected')
     return output_int
 
 
@@ -43,6 +45,11 @@ class FirstFactorialTest(unittest.TestCase):
 
     def test_negative_factorial(self):
         input_int = -1
+        with self.assertRaises(ValueError):
+            first_factorial(input_int)
+
+    def test_invalid_factorial(self):
+        input_int = 'a'
         with self.assertRaises(ValueError):
             first_factorial(input_int)
 
