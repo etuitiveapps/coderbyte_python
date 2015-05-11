@@ -3,6 +3,13 @@ import re
 
 
 def is_clean_string(input_string):
+    """Implement a function to determine if string doesn't have any special characters
+
+     Args:
+        input_string: input string
+
+    Returns: True if a string does not have any special characters
+    """
     match = re.match('[a-zA-Z]*', input_string)
     match_group = match.group(0)
     return match_group == input_string
